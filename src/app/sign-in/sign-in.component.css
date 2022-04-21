@@ -1,0 +1,159 @@
+body{
+    background-color: #18212b;
+    margin: 0;
+    padding:0;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: white;
+    background-position: center;
+    padding: 20px;
+    margin: auto;
+}
+
+
+header nav .onglets {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    align-items:center;
+}
+
+header nav .onglets .other a{
+    margin-left: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+header nav .onglets .logo a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
+
+header .affichage{
+    color: black;
+    text-align: center;
+}
+
+
+.input {
+    padding: 40px;
+    background-color: #18212b;
+    color: white;
+    margin: auto;
+}
+
+.form__label {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 0.2rem;
+  background-color: white;
+  border: none;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.button{
+    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    text-align: center;
+}
+
+
+footer {
+    margin-top: 150px;
+    background-color: #18212b;
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+
+  footer .social-media{
+    display: flex;
+  }
+  
+  footer .social-media p{
+    margin-right: 15px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 5px;
+    text-align:center;
+    width: 20px;
+    cursor:pointer;
+  }
+
+@media screen and (max-width: 687px) {
+
+    .button{
+        padding: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        text-align: center;
+        overflow-x: scroll;
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+
+    .button{
+        padding: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    .input{
+        overflow-x: scroll;
+    }
+
+}
+
+@media screen and (max-width:178px) {
+
+    header{
+      overflow-x:scroll;
+    }
+    
+  }
+  
+  @media screen and (max-width:290px){
+    footer{
+      overflow-x: scroll;
+    }
+  }
+
+
+
+  @media screen and (max-width:290px){
+    footer{
+      overflow-x: scroll;
+    }
+  }
