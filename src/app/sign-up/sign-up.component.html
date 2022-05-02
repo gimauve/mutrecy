@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mairie</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+    
+            <div class="onglets">
+              <div class="logo">
+                <a routerLink="" routerLinkActive="active">Mutrecy.fr</a>
+              </div>
+              <div class="other">
+                <a href="">Connexion</a>
+                <a href="">Forum</a>
+              </div>
+            </div>
+    
+        </nav>
+    
+    
+        <div class="affichage">
+            <h1>MAIRIE DE MUTRECY</h1>
+            <p>Bienvenue sur le site de la mairie de mutrecy</p>
+        </div>
+
+    </header>
+
+
+    <section class="input">
+        <div class="form" [formGroup]="profileForm">
+
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <div class="form__group">
+            <label for="name" class="form__label">Username</label>
+            <input id="first-name" type="text" class="form__input" id="name" placeholder="Full name" formControlName="username" required="" />
+            </div>
+
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <div class="form__group">
+            <label for="name" class="form__label">firstName</label>
+            </div>
+            <input type="text" class="form__input" id="name" placeholder="FirstName" formControlName="firstName" required="" />
+
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <div class="form__group">
+            <label for="name" class="form__label">lastName</label>
+            </div>
+            <input type="text" class="form__input" id="name" placeholder="lastName" formControlName="lastName" required="" />
+
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <div class="form__group">
+            <label for="name" class="form__label">Mot de passe</label>
+            </div>
+            <input type="password" class="form__input" id="name" placeholder="Password" formControlName="password" required="" />
+
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <div class="form__group">
+            <label for="name" class="form__label">Mot de passe</label>
+            </div>
+            <input type="password" class="form__input" id="name" placeholder="Password" formControlName="passwordAgain" required="" />
+
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <div class="form__group">
+            <label for="name" class="form__label">Email</label>
+            </div>
+            <input type="text" class="form__input" id="name" placeholder="email" formControlName="email" required="" />
+
+
+            <div class="date">
+            <label for="start">Start date:</label>
+
+            <input  type="date" id="start" name="trip-start"
+                value="2022-07-22"
+                formControlName="dateBirth">
+            </div>
+            
+            
+            <div class="error" *ngIf="getError()"><p>Nom d'utilisateur ou mot de passe incorrect</p></div>
+            <button class="button" (click)="onSubmit()">Connexion</button>
+
+        </div>
+   </section>
+
+
+   <footer>
+    <p>&copy; Contactez-nous au 02 31 79 38 05 ou par mail <a href="mailto:mage.mairiedemutrecy@wanadoo.fr">mage.mairiedemutrecy@wanadoo.fr</a></p>
+    <div class="social-media">
+      <p><i class="fab fa-facebook-f"></i></p>
+      <p><i class="fab fa-twitter"></i></p>
+      <p><i class="fab fa-instagram"></i></p>
+      <p><i class="fab fa-linkedin-in"></i></p>
+    </div>
+  </footer>
+    
+</body>
+</html>

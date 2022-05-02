@@ -9,47 +9,50 @@
 </head>
 
 <body>
+  <div id="navbar">
+    <div class="home">
+      <a href="">Mutrecy.fr</a>
+    </div>
+    <div class="autre">
+      <a routerLink="/signIn" routerLinkActive="active">Connexion</a>
+      <a href="">Forum</a>
+    </div>
+  </div>
 
-    <header>
-        <nav>
-    
-            <div class="onglets">
-              <div class="logo">
-                <a routerLink="" routerLinkActive="active">Mutrecy.fr</a>
-              </div>
-              <div class="other">
-                <a href="">Connexion</a>
-                <a href="">Forum</a>
-              </div>
-            </div>
-    
-        </nav>
-    
-    
-        <div class="affichage">
-            <h1>MAIRIE DE MUTRECY</h1>
-            <p>Bienvenue sur le site de la mairie de mutrecy</p>
+  <header>
+    <nav id="test">
+
+        <div class="onglets">
+          <div class="logo">
+            <a href="">Mutrecy.fr</a>
+          </div>
+          <div class="other">
+            <a routerLink="/signIn" routerLinkActive="active">Connexion</a>
+            <a href="">Forum</a>
+          </div>
         </div>
 
-    </header>
+    </nav>
+
+ </header>
 
 
     <section class="input">
-        <div class="form">
+        <div class="form" [formGroup]="profileForm">
 
             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
             <div class="form__group">
             <label for="name" class="form__label">Full Name</label>
-            <input type="text" class="form__input" id="name" placeholder="Full name" required="" />
+            <input id="first-name" type="text" class="form__input" id="name" placeholder="Full name" formControlName="username" required="" />
             </div>
 
             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
             <div class="form__group">
             <label for="name" class="form__label">Mot de passe</label>
             </div>
-            <input type="password" class="form__input" id="name" placeholder="Password" required="" />
-            
-            <button class="button" submit="">Connexion</button>
+            <input type="password" class="form__input" id="name" placeholder="Password" formControlName="password" required="" />
+            <div class="error" *ngIf="getError()"><p>Nom d'utilisateur ou mot de passe incorrect</p></div>
+            <button class="button" (click)="onSubmit()">Connexion</button>
 
         </div>
    </section>
